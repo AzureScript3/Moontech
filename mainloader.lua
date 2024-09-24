@@ -12,7 +12,7 @@ getgenv().loaded = true
 
 universeid = game.GameId
 
-setclipboard("discord.gg/xscripts")
+setclipboard("dsc.gg/moontech")
 
 pcall(function()
     if WebSocket.connect then
