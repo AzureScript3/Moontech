@@ -33,5 +33,5 @@ if universeid == 8737899170 then
 end
 
 if universeid == 6284583030 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AzureScript3/Moontech/main/petsim99.lua",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AzureScript3/Moontech/main/petsimx.lua",true))()
 end
