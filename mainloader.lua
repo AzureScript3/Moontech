@@ -1,37 +1,13 @@
-repeat
-    task.wait()
-until game.GameId ~= nil
-repeat
-    task.wait()
-until game:IsLoaded()
+--NOTE: THIS IS NOT SOURCE CODE ONLY LOADS GAMES
 
-if getgenv().loaded then
-    return
-end
-getgenv().loaded = true
-
-universeid = game.GameId
-
-setclipboard("dsc.gg/moontech")
-
-pcall(function()
-    if WebSocket.connect then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AzureScript3/Moontech/main/websocket.lua",true))()
-    end
-end)
-
-if universeid == 920587237 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AzureScript3/Moontech/main/adm.lua",true))()
-end
-
-if universeid == 142823291 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AzureScript3/Moontech/main/mm2.lua",true))()
-end
-
-if universeid == 8737899170 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AzureScript3/Moontech/main/petsim99.lua",true))()
-end
-
-if universeid == 6284583030 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AzureScript3/Moontech/main/petsimx.lua",true))()
+if game.GameId == 920587237 then
+    loadstring(game:HttpGet("https://moontech-scripts.vercel.app/adm.lua", true))()
+elseif game.GameId == 142823291 then
+    loadstring(game:HttpGet("https://moontech-scripts.vercel.app/mm2.lua", true))()
+elseif game.GameId == 8737899170 then
+    loadstring(game:HttpGet("https://moontech-scripts.vercel.app/petsim99.lua", true))()
+elseif game.GameId == 6284583030 then
+    loadstring(game:HttpGet("https://moontech-scripts.vercel.app/petsimx.lua", true))()
+else
+    game:GetService("Players").LocalPlayer:Kick("Game Not Supported!")
 end
